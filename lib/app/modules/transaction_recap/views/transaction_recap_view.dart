@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import '../../components/partials_component.dart';
 import '../controllers/transaction_recap_controller.dart';
 
 class TransactionRecapView extends GetView<TransactionRecapController> {
@@ -9,15 +10,16 @@ class TransactionRecapView extends GetView<TransactionRecapController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('TransactionRecapView'),
-        centerTitle: true,
-      ),
-      body: const Center(
-        child: Text(
-          'TransactionRecapView is working',
-          style: TextStyle(fontSize: 20),
-        ),
+      backgroundColor: Colors.white,
+      appBar: MyAppBar(
+        title: 'Rekap Reguler & Deposit',
+        elevation: .4,
+        actions: const [
+          Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Icon(Icons.cloud_sync),
+          ),
+        ],
       ),
     );
   }
